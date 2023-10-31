@@ -1,0 +1,6 @@
+<div class="d-flex justify-content-center">
+    <div class="list-group list-group-horizontal position-relative overflow-auto w-25">
+        <app-movie-item *ngFor="let movie of MostRatedList" [movie]="movie" (click)="onMovieClicled(movie)"
+            class="list-group-item"></app-movie-item>
+    </div>
+</div>
