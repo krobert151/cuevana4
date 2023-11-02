@@ -1,26 +1,21 @@
 <mat-dialog-content class="mat-typography">
-
-    <h1 mat-dialog-title class="text-center">{{data.title}}</h1>
-
-
+    <h1 mat-dialog-title class="text-center">{{movie.title}}</h1>
     <div class="row d-flex justify-content-center">
         <div class="col"></div>
         <div class="col-6">
             <img [src]="getMoviePoster()" width="100%">
         </div>
         <div class="col d-flex align-items-end ">
-            {{data.release_date}}
+            {{movie.release_date}}
         </div>
     </div>
     <div class=" row d-flex justify-content-center ">
         <div class=" col-10">
             <hr>
             <h3>Sinposis</h3>
-            <p>{{data.overview}}</p>
-
+            <p>{{movie.overview}}</p>
         </div>
     </div>
-
 </mat-dialog-content>
 <mat-dialog-actions align="end">
     <button mat-button mat-dialog-close>Cancel</button>

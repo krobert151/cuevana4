@@ -23,7 +23,7 @@ export class MovieMostRatedListComponent implements OnInit {
   onMovieClicled(movie: Movie) {
 
     const dialogRef = this.dialog.open(MovieDetailComponent, {
-      data: movie
+      data: movie.id.toString()
     });
 
     dialogRef.afterClosed().subscribe(result => {

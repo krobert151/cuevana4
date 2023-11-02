@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-center mx-5">
+    <mat-paginator [length]="totalItems " [pageSizeOptions]="[20]" aria-label="Select page" [pageIndex]="pageIndex" (page)="onPagintatorChange($event)">
+    </mat-paginator>
+</div>
+<div class="d-flex justify-content-center mx-5">
+    <div class="row d-flex justify-content-center">
+        <a class="col-2 m-2 d-flex justify-content-center" *ngFor="let movie of ListMovies" [routerLink]="['movie/',movie.id]">
+        <app-movie-list-item  [movie]="movie"></app-movie-list-item>
+        </a>
+    </div>
+</div>

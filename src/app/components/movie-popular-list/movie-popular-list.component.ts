@@ -24,7 +24,7 @@ export class MoviePopularListComponent implements OnInit {
   onMovieClicked(movie: Movie) {
 
     const dialogRef = this.dialog.open(MovieDetailComponent, {
-      data: movie
+      data: movie.id.toString()
     });
 
     dialogRef.afterClosed().subscribe(result => {

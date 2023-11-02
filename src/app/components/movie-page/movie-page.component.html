@@ -1,0 +1,27 @@
+<div
+[ngStyle]="{'background': 'url('+getMovieBackground()+')',
+'background-position':'center',
+'background-size':'85%',
+'background-repeat':'no-repeat',
+'background-color':'black',}">
+<div class="row d-flex justify-content-center" [ngStyle]="{'background':'radial-gradient(circle, rgba(0,0,0,0.2945553221288515) 0%, rgba(0,0,0,1) 85%)'}">
+    <div class="col-6 row d-flex   ">
+            <mat-card class="col-4 d-flex justify-content-center my-5 p-0">
+                <img [src]="getMoviePoster()">
+            </mat-card>
+            <div class="col text-white" [ngStyle]="{'padding-top':'10%',
+            'padding-left':'10%'}">
+                    <h1>
+                    {{movie.title}} ({{getMovieAnio()}})
+                    </h1>
+                    <div>
+                        <span>{{getMovieDate()}} </span>
+                        <span> * </span>
+                        <span>{{getMovieGenders()}}</span>
+                        <span> * </span>
+                        <span>{{getMovieDuration()}}</span>
+                    </div>
+            </div>
+    </div>
+</div>
+</div>
