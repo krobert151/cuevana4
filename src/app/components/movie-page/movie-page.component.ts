@@ -5,6 +5,7 @@ import { VideoResponse } from 'src/app/modals/video/video.module';
 import { MovieListService } from 'src/app/service/movie-list.service';
 import { environment } from 'src/environments/environment';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { SagaResponse } from 'src/app/modals/saga/saga.module';
 
 
 @Component({
@@ -18,6 +19,7 @@ export class MoviePageComponent implements OnInit {
   video!: VideoResponse;
   videoUrl!: SafeResourceUrl;
   id!: string | null;
+  saga!: SagaResponse;
   constructor(private movieService: MovieListService, private route: ActivatedRoute, private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
@@ -29,7 +31,11 @@ export class MoviePageComponent implements OnInit {
       this.movieService.getVideoById(this.id).subscribe(resp => {
         this.video = resp;
       })
+      if (this.movie.belongs_to_collection != null) {
+
+      }
     }
+
 
   }
   getMovieBackground() {

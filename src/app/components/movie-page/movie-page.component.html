@@ -34,3 +34,11 @@
         </div>
     </div>
 </div>
+<div *ngIf="movie.belongs_to_collection!=null" class="d-flex justify-content-center align-items-center flex-column">
+    <h2 class="text-center">Saga</h2>
+    <div class="list-group list-group-horizontal position-relative overflow-auto w-75">
+        <div *ngFor="let trailer of video.results" class="list-group-item">
+
+        </div>
+    </div>
+</div>
